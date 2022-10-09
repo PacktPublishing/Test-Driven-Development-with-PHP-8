@@ -1,0 +1,46 @@
+# Template PHP Build
+
+# This template allows you to validate your PHP application.
+# The workflow allows running tests and code linting on the default branch.
+
+image: docker:stable
+
+options:
+  docker: true
+
+pipelines:
+  default:
+    - parallel:
+        - step:
+            name: App Test
+            script:
+              - set -eu
+              - apk add --no-cache py-pip bash
+              - apk add --no-cache gcc
+              - apk add --update --no-cache --virtual .tmp-build-deps gcc libc-dev linux-headers postgresql-dev && apk add libffi-dev
+              - apk update && apk add python3-dev gcc libc-dev
+              - pip install --upgrade pip setuptools wheel
+              - pip install --no-cache-dir docker-compose
+              - docker-compose -v
+              #- apt update
+              #- yes | apt install python3-pip
+              #- apt install libffi-dev
+              - ls -lap
+              - pwd
+              - cd docker
+              #- pip3 install docker-compose
+              - docker-compose build && docker-compose up -d
+              #- cd codebase/symfony
+              #- ls -lap
+              #- pwd
+              #- composer install
+              #- php bin/console doctrine:database:create --env=test
+              #- php bin/console doctrine:database:create
+              #- php bin/console make:migration
+              #- php bin/console doctrine:migrations:migrate -n --env=test
+              #- php bin/console doctrine:migrations:migrate -n
+              #- php bin/console doctrine:fixtures:load
+              #- ./runPhpunit.sh
+            caches:
+              - composer
+

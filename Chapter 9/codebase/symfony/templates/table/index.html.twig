@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello TableController!{% endblock %}
+
+{% block body %}
+
+<div class="example-wrapper">
+    <h1>{{ controller_name }}</h1>
+
+    <table>
+        <thead>
+        <tr>
+            <th>Year</th>
+            <th>Name</th>
+            <th>Color</th>
+            <th>Manufacturer</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for item in data %}
+            <tr>
+                <td>{{ item.year }}</td>
+                <td>{{ item.name }}</td>
+                <td>{{ item.colour.name }}</td>
+                <td>{{ item.manufacturer.name }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+{% endblock %}
