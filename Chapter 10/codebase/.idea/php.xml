@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/behat/vendor/symfony/config" />
+      <path value="$PROJECT_DIR$/behat/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/behat/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/behat/vendor/symfony/http-client" />
+      <path value="$PROJECT_DIR$/behat/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/behat/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/behat/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/behat/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/behat/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/behat/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/behat/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/behat/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/behat/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/behat/vendor/behat/gherkin" />
+      <path value="$PROJECT_DIR$/behat/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/behat/vendor/behat/behat" />
+      <path value="$PROJECT_DIR$/behat/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/behat/vendor/behat/mink-selenium2-driver" />
+      <path value="$PROJECT_DIR$/behat/vendor/symfony/http-client-contracts" />
+      <path value="$PROJECT_DIR$/behat/vendor/behat/mink" />
+      <path value="$PROJECT_DIR$/behat/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/behat/vendor/behat/transliterator" />
+      <path value="$PROJECT_DIR$/behat/vendor/symfony/polyfill-php81" />
+      <path value="$PROJECT_DIR$/behat/vendor/behat/mink-goutte-driver" />
+      <path value="$PROJECT_DIR$/behat/vendor/symfony/dom-crawler" />
+      <path value="$PROJECT_DIR$/behat/vendor/behat/mink-extension" />
+      <path value="$PROJECT_DIR$/behat/vendor/fabpot/goutte" />
+      <path value="$PROJECT_DIR$/behat/vendor/symfony/browser-kit" />
+      <path value="$PROJECT_DIR$/behat/vendor/behat/mink-browserkit-driver" />
+      <path value="$PROJECT_DIR$/behat/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/behat/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/behat/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/behat/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/behat/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/behat/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/behat/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/behat/vendor/symfony/dependency-injection" />
+      <path value="$PROJECT_DIR$/behat/vendor/masterminds/html5" />
+      <path value="$PROJECT_DIR$/behat/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/behat/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/behat/vendor/instaclick/php-webdriver" />
+      <path value="$PROJECT_DIR$/behat/vendor/composer" />
+    </include_path>
+  </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="8.1">
+    <option name="suggestChangeDefaultLanguageLevel" value="false" />
+  </component>
+</project>

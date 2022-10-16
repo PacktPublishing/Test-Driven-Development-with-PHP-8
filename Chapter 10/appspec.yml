@@ -1,0 +1,10 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/ec2-user/phptdd
+hooks:
+  AfterInstall:
+    - location: aws/codedeploy/containers_setup_php.sh
+      timeout: 3600
+      runas: ec2-user

@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Clerk{% endblock %}
+
+{% block body %}
+    <div class="example-wrapper">
+        <h1>Clerk - Add Toy Car</h1>
+
+        {{ form_start(clerk_form) }}
+        {{ form_row(clerk_form.name) }}
+        {{ form_row(clerk_form.year, {
+            label: 'Year'
+        }) }}
+
+        {{ form_end(clerk_form) }}
+    </div>
+{% endblock %}

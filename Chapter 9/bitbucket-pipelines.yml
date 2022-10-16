@@ -1,8 +1,3 @@
-# Template PHP Build
-
-# This template allows you to validate your PHP application.
-# The workflow allows running tests and code linting on the default branch.
-
 image: docker:stable
 
 options:
@@ -12,7 +7,7 @@ pipelines:
   default:
     - parallel:
         - step:
-            name: App Test
+            name: Prepare environment
             script:
               - set -eu
               - apk add --no-cache py-pip bash
@@ -22,25 +17,13 @@ pipelines:
               - pip install --upgrade pip setuptools wheel
               - pip install --no-cache-dir docker-compose
               - docker-compose -v
-              #- apt update
-              #- yes | apt install python3-pip
-              #- apt install libffi-dev
               - ls -lap
               - pwd
               - cd docker
-              #- pip3 install docker-compose
               - docker-compose build && docker-compose up -d
-              #- cd codebase/symfony
-              #- ls -lap
-              #- pwd
-              #- composer install
-              #- php bin/console doctrine:database:create --env=test
-              #- php bin/console doctrine:database:create
-              #- php bin/console make:migration
-              #- php bin/console doctrine:migrations:migrate -n --env=test
-              #- php bin/console doctrine:migrations:migrate -n
-              #- php bin/console doctrine:fixtures:load
-              #- ./runPhpunit.sh
+              - docker exec -i docker_server-web_1 /var/www/html/symfony/setup.sh
+              - docker exec -i docker_server-web_1 /var/www/html/symfony/runCoverage.sh
+              - docker exec -i docker_server-web_1 /var/www/html/behat/setup.sh
+              - docker exec -i docker_server-web_1 /var/www/html/behat/runBehatTests.sh
             caches:
               - composer
-

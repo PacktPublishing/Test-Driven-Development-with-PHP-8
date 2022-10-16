@@ -1,0 +1,59 @@
+image: docker:stable
+
+options:
+  docker: true
+
+pipelines:
+  default:
+    - step:
+        name: Run Automated Tests
+        script:
+          - set -eu
+          - apk add --no-cache py-pip bash
+          - apk add --no-cache gcc
+          - apk add --update --no-cache --virtual .tmp-build-deps gcc libc-dev linux-headers postgresql-dev && apk add libffi-dev
+          - apk update && apk add python3-dev gcc libc-dev
+          - pip install --upgrade pip setuptools wheel
+          - pip install --no-cache-dir docker-compose
+          - docker-compose -v
+          - ls -lap
+          - pwd
+          - cd docker
+          - docker-compose build && docker-compose up -d
+          - docker exec -i docker_server-web_1 /var/www/html/symfony/setup.sh
+          - docker exec -i docker_server-web_1 /var/www/html/symfony/runCoverage.sh
+          - docker exec -i docker_server-web_1 /var/www/html/behat/setup.sh
+          - docker exec -i docker_server-web_1 /var/www/html/behat/runBehatTests.sh
+        caches:
+          - composer
+    - step:
+        name: Package and Upload
+        script:
+          - apk add zip
+          - zip -r phptddapp.zip .
+          - pipe: atlassian/aws-code-deploy:0.2.10
+            variables:
+              AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION
+              AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+              AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+              COMMAND: 'upload'
+              APPLICATION_NAME: 'mycodedeployapp'
+              ZIP_FILE: 'phptddapp.zip'
+              S3_BUCKET: $S3_BUCKET
+              VERSION_LABEL: 'phptdd-app-1.0.0'
+    - step:
+        name: Deploy to AWS
+        script:
+          - pipe: atlassian/aws-code-deploy:0.2.5
+            variables:
+              AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION
+              AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+              AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+              APPLICATION_NAME: $APPLICATION_NAME
+              DEPLOYMENT_GROUP: $DEPLOYMENT_GROUP
+              S3_BUCKET: $S3_BUCKET
+              COMMAND: 'deploy'
+              VERSION_LABEL: 'phptdd-app-1.0.0'
+              IGNORE_APPLICATION_STOP_FAILURES: 'true'
+              FILE_EXISTS_BEHAVIOR: 'OVERWRITE'
+              WAIT: 'true'

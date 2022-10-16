@@ -1,0 +1,18 @@
+default:
+  suites:
+    default:
+      paths: [ '%paths.base%/features/default' ]
+      contexts:
+        - HomeContext
+    suite_a:
+      paths: [ '%paths.base%/features/suite_a' ]
+      contexts:
+        - InventoryClerkRegistrationContext
+    suite_b:
+      paths: [ '%paths.base%/features/suite_b' ]
+      contexts:
+        - InventoryClerkLoginContext
+    suite_c:
+      paths: [ '%paths.base%/features/suite_c' ]
+      contexts:
+        - CreateToyCarRecordContext
