@@ -1,0 +1,35 @@
+version: "3.7"
+
+services:
+  # Web Server
+  server-web:
+    build:
+      dockerfile: ./Dockerfile
+      context: .
+    restart: always
+    volumes:
+      - "../codebase/:/var/www/html/"
+    ports:
+      - "8081:80"
+
+  # MySQL Database
+  server-mysql:
+    image: mysql:8.0.19
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: mypassword
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+  # Optional MySQL Management Tool
+  app-phpmyadmin:
+    image: phpmyadmin/phpmyadmin:5.0.1
+    restart: always
+    environment:
+      PMA_HOST: server-mysql
+      PMA_USER: root
+      PMA_PASSWORD: mypassword
+    ports:
+      - "3333:80"
+volumes:
+  mysql-data:
