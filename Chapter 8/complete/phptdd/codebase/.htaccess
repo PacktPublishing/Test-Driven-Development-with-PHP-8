@@ -1,0 +1,29 @@
+DirectoryIndex symfony/public/index.php
+
+#<VirtualHost *:80>
+#    DocumentRoot /var/www/html/symfony/public
+#
+#    <Directory /var/www/html/symfony/public>
+#        AllowOverride All
+#        Order Allow,Deny
+#        Allow from All
+#    </Directory>
+#
+#</VirtualHost>
+
+#Options +FollowSymLinks -MultiViews
+# Turn mod_rewrite on
+#RewriteEngine On
+
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteRule ^/symfony/public/(.*)$ /var/www/html/symfony/public/index.php?id=$1 [L,QSA,NC]
+
+#RewriteEngine On
+#RewriteRule ^(.*)$ /symfony/public/index.php$1 [R=301,L]
+
+#RewriteEngine On
+#Redirect / /symfony/public/
+
+#RewriteEngine on
+#RewriteCond %{REQUEST_URI} ^/$
+#RewriteRule (.*) /symfony/public/ [R=301]
