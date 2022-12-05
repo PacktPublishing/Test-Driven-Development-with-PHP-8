@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/phptdd.iml" filepath="$PROJECT_DIR$/.idea/phptdd.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/php8docker.iml" filepath="$PROJECT_DIR$/.idea/php8docker.iml" />
     </modules>
   </component>
 </project>
