@@ -1,0 +1,9 @@
+default:
+  suites:
+    default:
+      contexts:
+        - FeatureContext
+        - HomeContext
+    suite_a:
+      contexts:
+        - InventoryClerkRegistrationContext

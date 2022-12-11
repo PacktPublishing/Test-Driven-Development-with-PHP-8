@@ -1,0 +1,12 @@
+default:
+  suites:
+    default:
+      contexts:
+        - FeatureContext
+        - HomeContext
+    suite_a:
+      contexts:
+        - InventoryClerkRegistrationContext
+    suite_create:
+      contexts:
+        - CreateToyCarRecordContext
