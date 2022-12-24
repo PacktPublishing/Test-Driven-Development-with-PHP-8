@@ -21,7 +21,7 @@ This book covers the following exciting features:
 * Get the most out of your automated tests by using continuous integration
 * Use continuous delivery to help you prepare your application for deployment
 
-If you feel this book is for you, get your [copy](https://www.amazon.com/dp/1803245018) today!
+If you feel this book is for you, get your [copy](https://www.amazon.com/dp/1803230754) today!
 
 <a href="https://www.packtpub.com/?utm_source=github&utm_medium=banner&utm_campaign=GitHubBanner"><img src="https://raw.githubusercontent.com/PacktPublishing/GitHub/master/GitHub.png" 
 alt="https://www.packtpub.com/" border="5" /></a>
