@@ -67,3 +67,8 @@ We also provide a PDF file that has color images of the screenshots/diagrams use
 
 ## Get to Know the Author
 **Rainier Sarabia** is a Software Engineering Manager, who currently works in Melbourne, Australia for Astute Payroll, a Deel company. He has worked on hundreds of complex software projects, including massive enterprise SaaS products while leading and training senior engineers from all over the world. His favorite programming languages are PHP, C#, Java, and Javascript which he uses for both professional and personal projects. He co-founded his first tech company back in 2014, with over 400,000 users. Outside of working hours, he is an amateur astronomer. He spends most of his time doing astrophotography focusing on deep-sky objects like nebulae and galaxies.
+
+### Download a free PDF
+
+ <i>If you have already purchased a print or Kindle version of this book, you can get a DRM-free PDF version at no cost.<br>Simply click on the link to claim your free PDF.</i>
+<p align="center"> <a href="https://packt.link/free-ebook/9781803230757">https://packt.link/free-ebook/9781803230757 </a> </p>
