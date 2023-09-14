@@ -51,6 +51,13 @@ class Display
 
 ```
 
+##Erata
+
+* Page no 69: makeSound() function - moo! should be mooo!
+* Page no 159: 	Typo on filename, “behay.yml” Correct filename is “behat.yml”.
+* Pafe no 40: File name in the book is "Chapter 3.zip" shoube be complete.zip
+* Page no 82 : Figure 5.1 - Error message is not correct.It should be Class App\Example\Calculator not found.Path and class name are different.
+
 **Following is what you need for this book:**
 
 PHP web developers end up building complex enterprise projects without prior experience in test-driven and behavior-driven development which results in software that’s complex and difficult to maintain. This step-by-step guide helps you manage the complexities of large-scale web applications. It takes you through the processes of working on a project, starting from understanding business requirements and translating them into actual maintainable software, to automated deployments.	
