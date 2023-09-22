@@ -53,10 +53,7 @@ class Display
 
 ##Erata
 
-* Page no 69: makeSound() function - moo! should be mooo!
 * Page no 159: 	Typo on filename, “behay.yml” Correct filename is “behat.yml”.
-* Pafe no 40: File name in the book is "Chapter 3.zip" shoube be complete.zip
-* Page no 82 : Figure 5.1 - Error message is not correct.It should be Class App\Example\Calculator not found.Path and class name are different.
 
 **Following is what you need for this book:**
 
