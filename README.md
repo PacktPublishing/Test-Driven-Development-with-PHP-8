@@ -51,7 +51,7 @@ class Display
 
 ```
 
-##Erata
+## Erata
 
 * Page no 159: 	Typo on filename, “behay.yml” Correct filename is “behat.yml”.
 
